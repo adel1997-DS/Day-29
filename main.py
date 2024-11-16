@@ -3,8 +3,8 @@ from pydantic import BaseModel
 import joblib
 
 # تحميل النموذج والمقياس
-model = joblib.load(r"knn_model.joblib")
-scaler = joblib.load(r"scaler.joblib")
+model = joblib.load(r"C:\Users\adeln\Desktop\A\Day-29\knn_model.joblib")
+scaler = joblib.load(r"C:\Users\adeln\Desktop\A\Day-29\scaler.joblib")
 
 app = FastAPI()
 
