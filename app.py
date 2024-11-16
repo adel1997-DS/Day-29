@@ -10,7 +10,6 @@ highest_value = st.number_input("Highest Value", min_value=0)
 current_value = st.number_input("Current Value", min_value=0)
 
 if st.button("توقع"):
-    # بيانات الإدخال
     data = {
         "appearance": appearance,
         "minutes_played": minutes_played,
@@ -18,7 +17,6 @@ if st.button("توقع"):
         "current_value": current_value
     }
     try:
-        # إرسال الطلب إلى FastAPI المحلي
         response = requests.post("http://127.0.0.1:8000/predict", json=data)
         if response.status_code == 200:
             prediction = response.json().get("prediction")
